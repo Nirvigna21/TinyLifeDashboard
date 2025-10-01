@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiny Life Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tiny Life Dashboard</h1>
+
+    <div class="dashboard">
+        <div class="card">
+            <h2>Water Intake (glasses)</h2>
+            <input type="number" id="waterInput" min="0" placeholder="0">
+            <button onclick="saveWater()">Save</button>
+            <p id="waterDisplay">0 glasses</p>
+        </div>
+
+        <div class="card">
+            <h2>Steps</h2>
+            <input type="number" id="stepsInput" min="0" placeholder="0">
+            <button onclick="saveSteps()">Save</button>
+            <p id="stepsDisplay">0 steps</p>
+        </div>
+
+        <div class="card">
+            <h2>Mood</h2>
+            <button onclick="saveMood('😊')">😊</button>
+            <button onclick="saveMood('😐')">😐</button>
+            <button onclick="saveMood('😢')">😢</button>
+            <p id="moodDisplay">No mood selected</p>
+        </div>
+
+        <div class="card">
+            <h2>Daily Note</h2>
+            <textarea id="noteInput" placeholder="Write a short note..."></textarea>
+            <button onclick="saveNote()">Save</button>
+            <p id="noteDisplay">No note yet</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
